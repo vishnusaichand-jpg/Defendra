@@ -1,5 +1,5 @@
 
-import { GoogleGenAI, Chat, GenerateContentResponse, Modality, Type, LiveServerMessage } from "@google/genai";
+import { GoogleGenAI, Chat, GenerateContentResponse, Modality, Type, LiveServerMessage, ThinkingLevel } from "@google/genai";
 import { SYSTEM_INSTRUCTION } from "../constants";
 import { PlanType } from "../types";
 
@@ -68,7 +68,7 @@ export class GeminiService {
       contents: this.wrapPrompt(prompt, plan),
       config: {
         systemInstruction: SYSTEM_INSTRUCTION,
-        thinkingConfig: { thinkingLevel: 'low' }
+        thinkingConfig: { thinkingLevel: ThinkingLevel.LOW }
       },
     });
     return response.text || '';
