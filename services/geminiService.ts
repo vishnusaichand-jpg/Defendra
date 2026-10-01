@@ -68,7 +68,7 @@ export class GeminiService {
       contents: this.wrapPrompt(prompt, plan),
       config: {
         systemInstruction: SYSTEM_INSTRUCTION,
-        thinkingConfig: { thinkingLevel: 'LOW' }
+        thinkingConfig: { thinkingLevel: 'low' }
       },
     });
     return response.text || '';
