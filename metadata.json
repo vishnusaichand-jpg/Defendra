@@ -1,0 +1,8 @@
+{
+  "name": "Defendra",
+  "description": "Professional cybersecurity assistant with integrated authentication and subscription logic.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
